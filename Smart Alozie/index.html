@@ -5,25 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="media-query.css">
-   <link rel="stylesheet" href="global.css">
   </head>
   <body>
     <!-- first section hero -->
     <div class="main-div">
-     
-      <div class="container-main">
+      <div class="container">
         <div class="header">
           <div class="logonav">
-            <a href="index.html"><img src="logo.png" alt="Home" /></a>
-
+            <img src="logo.png" alt="" />
             <div class="navlinks">
               <h4><a href="">Home</a></h4>
-              <h4><a href="#about">About Me</a></h4>
-
+              <h4><a href="">About Me</a></h4>
             </div>
           </div>
-          <div class="header-button open-modal " onclick="openModal()">
+          <div class="header-button open-modal" onclick="openModal()">
             <a href="#">Chat With Me</a>
           </div>
           <div class="hamburger" id="hamburger">
@@ -34,15 +29,11 @@
         </div>
         <div class="mobile-menu" id="mobileMenu">
           <span class="close-menu" id="closeMenu">&times;</span>
-          <div class="navlinkss">
-            <h4><a href="">Home</a></h4>
-            <h4><a href="#about">About Me</a></h4>
-            <div class="header-buttonss open-modal mobile-resp" onclick="openModal()">
-              <a href="#">Chat With Me</a>
-            </div>
-
+          <a href="">Home</a>
+          <a href="">About Me</a>
+          <div class="header-buttons open-modal" onclick="openModal()">
+            <a href="#">Chat With Me</a>
           </div>
-         
         </div>
         <div class="hero-section">
           <h1>Earn $2k To $100k Monthly</h1>
@@ -52,7 +43,7 @@
     </div>
 
     <!-- about section section hero -->
-    <div id="about" class="about section">
+    <div class="about section">
       <div class="container">
         <div class="about-content">
           <h5>Dear Website Visitor,</h5>
@@ -89,20 +80,20 @@
     </div>
 
     <div class="main-footer-section">
-      <div class="container-main">
+      <div class="container">
         <div class="footer-section">
           <!-- YouTube Video Container -->
           <div class="youtubevideo">
             <img id="thumbnail" src="Thumbnail.jpg" alt="YouTube Thumbnail" />
             <iframe
               id="youtubeFrame"
+              width="560"
+              height="315"
               src="https://www.youtube.com/embed/aqz-KE-bpKQ?enablejsapi=1"
               frameborder="0"
               allowfullscreen
               style="display: none"
             ></iframe>
-             <img class="youtubeplaybtn" src="youtubeplaybtn.png" alt="">
-            
           </div>
 
           <div class="mainfootervideo-contrls">
@@ -160,75 +151,5 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="script.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Logo and Navbar animation
-        gsap.from(".logonav", {
-          opacity: 0,
-          y: -50,
-          duration: 1,
-          ease: "power2.out",
-        });
-    
-        // Nav links animation
-        gsap.from(".navlinks h4", {
-          opacity: 0,
-          y: -20,
-          duration: 1,
-          stagger: 0.2,
-          delay: 0.5,
-        });
-    
-        // Header button animation
-        gsap.from(".header-button", {
-          opacity: 0,
-          scale: 0.5,
-          duration: 1,
-          delay: 0.8,
-          ease: "back.out(1.7)",
-        });
-    
-        // Hero section animation
-        gsap.from(".hero-section h1", {
-          opacity: 0,
-          y: 50,
-          duration: 1.2,
-          delay: 1,
-          ease: "power2.out",
-        });
-    
-        gsap.from(".hero-section img", {
-          opacity: 0,
-          scale: 0.8,
-          duration: 1.2,
-          delay: 1.5,
-          ease: "power2.out",
-        });
-    
-        // Mobile menu animation
-        const hamburger = document.getElementById("hamburger");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const closeMenu = document.getElementById("closeMenu");
-    
-        hamburger.addEventListener("click", () => {
-          gsap.to(mobileMenu, {
-            x: 0,
-            opacity: 1,
-            duration: 0.5,
-            ease: "power2.out",
-          });
-        });
-    
-        closeMenu.addEventListener("click", () => {
-          gsap.to(mobileMenu, {
-            x: "100%",
-            opacity: 0,
-            duration: 0.5,
-            ease: "power2.in",
-          });
-        });
-      });
-    </script>
-    
   </body>
 </html>
