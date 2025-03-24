@@ -86,15 +86,17 @@ document.addEventListener("DOMContentLoaded", function () {
   function openMenu() {
     gsap.to(mobileMenu, {
       left: "0%",
-      duration: 0.6,
+      duration: 0.5,
       ease: "power3.out",
+      opacity: 1,
     });
   }
 
   function closeMenuFunc() {
     gsap.to(mobileMenu, {
       left: "-100%",
-      duration: 0.6,
+      duration: 0.5,
+      opacity: 0,
       ease: "power3.in",
     });
   }

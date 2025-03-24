@@ -11,6 +11,7 @@
     .notedivs {
       flex-wrap: wrap;
       justify-content: center;
+      gap: 14px;
     }
   }
 
@@ -49,8 +50,8 @@
       display: flex;
     }
     .about-all-content p {
-      font-size: 18px;
-      line-height: 40px;
+      font-size: 16px;
+      line-height: 32px;
     }
   
     .about-extra-content h4 {
@@ -87,7 +88,7 @@
     }
   
     .about-all-content h6 {
-      font-size: 22px;
+      font-size: 17px;
       padding: 7.268px 8.176px;
     }
   
